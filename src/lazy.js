@@ -1,5 +1,5 @@
 // Intersection Observer
-
+//lazy loading
 const isIntersecting = (entry) => {
     //entry es el elemento que se esta observando
     return entry.isIntersecting //true dentro de la pantalla
