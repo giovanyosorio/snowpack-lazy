@@ -2,7 +2,7 @@
  * This file is just a silly example to show everything working in the browser.
  * When you're ready to start on your site, clear the file. Happy hacking!
  **/
-
+import {registerImage} from "./lazy"
 console.log('Happy hacking :)')
 
 //api https://randomfox.ca/
@@ -34,9 +34,11 @@ const mountNode = document.getElementById('images')
 //agregar imagen al DOM
 
 const addBotton= document.querySelector('button')
+
 const addImages =()=> {
     const newImage = createImageNode()
     mountNode.append(newImage)
+    registerImage(newImage)
 }
 addBotton.addEventListener("click",addImages)
 
