@@ -20,12 +20,24 @@ const createImageNode = () => {
     const container = document.createElement('div')
     container.className = 'p-4'
     const img = document.createElement('img')
-    img.className = 'mx-auto'
-    img.width = 320
+    //img.className = 'mx-auto'
+    img.width = "320"
     img.dataset.src = `https://randomfox.ca/images/${random()}.jpg` //template string
-    img.alt = 'Random fox'
+/*      const imageWrapper = document.createElement("div");
+    imageWrapper.className = "bg-gray-300";
+    imageWrapper.style.minHeight = "100px";
+    imageWrapper.style.display = "inline-block";
+    imageWrapper.appendChild(img);
+    container.appendChild(imageWrapper); */
+    img.className = 'mx-auto bg-gray-300 rounded-md';
+  
+    //img.alt = 'Random fox'
     container.appendChild(img)
+    //return container
+    appendedImages++;
+    printLog();
     return container
+
 }
 
 const nuevaImagen = createImageNode()
@@ -34,6 +46,13 @@ const mountNode = document.getElementById('images')
 //agregar imagen al DOM
 
 const addBotton= document.querySelector('button')
+const deleteImages = document.getElementById('btnDelete')
+
+const cleanImages = () => {
+    mountNode.innerHTML = ''
+    console.log('clean')
+}
+deleteImages.addEventListener("click",cleanImages) 
 
 const addImages =()=> {
     const newImage = createImageNode()

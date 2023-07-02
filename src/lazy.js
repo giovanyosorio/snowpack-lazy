@@ -6,7 +6,7 @@ const isIntersecting = (entry) => {
 }
 const observer = new IntersectionObserver((entries) => {
     entries.filter(isIntersecting).forEach(loadImage)
-   // console.log(entries)
+   //console.log(entries.length)
 })
 const loadImage = (entry) => {
    const container = entry.target //img //container (div)
@@ -15,6 +15,8 @@ const loadImage = (entry) => {
      const url = imagen.dataset.src
     //load image
     imagen.src = url
+    loadedImages++;
+    printLog();
     //desregistra la imagen
     observer.unobserve(container) 
 }
