@@ -22,7 +22,7 @@ const createImageNode = () => {
     const img = document.createElement('img')
     img.className = 'mx-auto'
     img.width = 320
-    img.src = `https://randomfox.ca/images/${random()}.jpg` //template string
+    img.dataset.src = `https://randomfox.ca/images/${random()}.jpg` //template string
     img.alt = 'Random fox'
     container.appendChild(img)
     return container

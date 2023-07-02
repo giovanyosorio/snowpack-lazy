@@ -9,15 +9,14 @@ const observer = new IntersectionObserver((entries) => {
    // console.log(entries)
 })
 const loadImage = (entry) => {
-   const container = entry.target //img
-/*    const imagen = container.firstChild
-    const url = imagen.dataset.src
+   const container = entry.target //img //container (div)
+    
+    const imagen = container.firstChild
+     const url = imagen.dataset.src
     //load image
     imagen.src = url
     //desregistra la imagen
-    observer.unobserve(container) */
-    console.log('hola');
-    observer.unobserve(container)
+    observer.unobserve(container) 
 }
 
 
@@ -26,4 +25,3 @@ export const registerImage = (img) => {
 
     observer.observe(img)
 }
-
