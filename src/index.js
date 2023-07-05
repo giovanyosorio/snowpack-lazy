@@ -3,6 +3,8 @@
  * When you're ready to start on your site, clear the file. Happy hacking!
  **/
 import {registerImage} from "./lazy"
+import jsx from "hyperscript";
+
 console.log('Happy hacking :)')
 
 //api https://randomfox.ca/
@@ -17,22 +19,27 @@ console.log(random());
 
 const createImageNode = () => {
 
-    const container = document.createElement('div')
-    container.className = 'p-4'
-    const img = document.createElement('img')
+    /* const container = document.createElement('div')
+    container.className = 'p-4' */
+    
+    //const img = document.createElement('img')
+    
     //img.className = 'mx-auto'
-    img.width = "320"
-    img.dataset.src = `https://randomfox.ca/images/${random()}.jpg` //template string
+    const img = jsx("img", { className: "mx-auto" , width: "320","data-src": `https://randomfox.ca/images/${random()}.jpg`});
+    //img.width = "320"
+    //img.dataset.src = `https://randomfox.ca/images/${random()}.jpg` //template string
 /*      const imageWrapper = document.createElement("div");
     imageWrapper.className = "bg-gray-300";
     imageWrapper.style.minHeight = "100px";
     imageWrapper.style.display = "inline-block";
     imageWrapper.appendChild(img);
     container.appendChild(imageWrapper); */
-    img.className = 'mx-auto bg-gray-300 rounded-md';
-  
+    //img.className = 'mx-auto bg-gray-300 rounded-md';
+    //const container = h("div", { className: "p-4" ,img});
+    const container = jsx("div", { className: "p-4" }, img);
+    
     //img.alt = 'Random fox'
-    container.appendChild(img)
+    
     //return container
     appendedImages++;
     printLog();
