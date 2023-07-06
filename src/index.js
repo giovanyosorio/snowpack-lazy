@@ -36,8 +36,7 @@ const createImageNode = () => {
     container.appendChild(imageWrapper); */
     //img.className = 'mx-auto bg-gray-300 rounded-md';
     //const container = h("div", { className: "p-4" ,img});
-    const container = jsx("div", { className: "p-4" }, img);
-    
+  //  const container = jsx("div", { className: "p-4" }, img);
     //img.alt = 'Random fox'
     
     //return container
