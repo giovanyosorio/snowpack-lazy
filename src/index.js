@@ -10,7 +10,7 @@ console.log('Happy hacking :)')
 //api https://randomfox.ca/
 const max = 122
 const min = 1
-
+//, random function 
 const random = () =>  Math.floor(Math.random() * (max - min)) + min
 
 console.log(random());
