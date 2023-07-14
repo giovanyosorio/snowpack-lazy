@@ -1,4 +1,4 @@
-// Intersection Observer
+/// Intersection Observer
 //lazy loading
 const isIntersecting = (entry) => {
     //entry es el elemento que se esta observando
@@ -22,7 +22,7 @@ const loadImage = (entry) => {
 }
 
 
-export const registerImage = (img) => {
+export const registerImage = (img) =>{
 //intersection observer observa si un elemento esta en el viewport
 
     observer.observe(img)
